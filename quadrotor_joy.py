@@ -19,7 +19,7 @@ def scan_callback(msg):
 
 
 if __name__ == "__main__":
-  rospy.init_node('hector_quad')
+  rospy.init_node('quad_joy')
   pub = rospy.Publisher('/cmd_vel', Twist, queue_size=10)
   rospy.Subscriber('/joy', Joy, joy_callback)
   rospy.Subscriber("/scan", LaserScan, scan_callback)
